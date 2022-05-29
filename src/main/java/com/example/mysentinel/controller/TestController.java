@@ -28,22 +28,22 @@ public class TestController {
         }
 
     }
-
-    @PostConstruct//表示 当前类的构造函数执行之后执行
-    public void initFlowRules(){
-        //创建限流规则集合
-        List<FlowRule> rules = new ArrayList<>();
-        //创建限流规则
-        FlowRule rule = new FlowRule();
-        //资源,表示sentinel对哪些资源生效
-        rule.setResource("hello");
-        //定义限流规则类型FLOW_GRADE_QPS qps
-        rule.setGrade(RuleConstant.FLOW_GRADE_QPS);
-        //定义qps个数
-        rule.setCount(2);
-        //限流规则添加到集合
-        rules.add(rule);
-        //加载限流规则
-        FlowRuleManager.loadRules(rules);
-    }
+    //表示 当前类的构造函数执行之后执行
+//    @PostConstruct
+//    public void initFlowRules(){
+//        //创建限流规则集合
+//        List<FlowRule> rules = new ArrayList<>();
+//        //创建限流规则
+//        FlowRule rule = new FlowRule();
+//        //资源,表示sentinel对哪些资源生效
+//        rule.setResource("hello");
+//        //定义限流规则类型FLOW_GRADE_QPS qps
+//        rule.setGrade(RuleConstant.FLOW_GRADE_QPS);
+//        //定义qps个数
+//        rule.setCount(2);
+//        //限流规则添加到集合
+//        rules.add(rule);
+//        //加载限流规则
+//        FlowRuleManager.loadRules(rules);
+//    }
 }
